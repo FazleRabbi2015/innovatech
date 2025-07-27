@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name | GitHub Portfolio</title>
+  <title>DreamHome Real Estate</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,114 +14,219 @@
 
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
       line-height: 1.6;
+      background: #f5f5f5;
+      color: #333;
     }
 
     header {
-      background-color: #24292e;
+      background: url('https://source.unsplash.com/1600x600/?real-estate,house') no-repeat center center/cover;
       color: #fff;
-      padding: 1rem 2rem;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       text-align: center;
+      padding: 0 2rem;
     }
 
     header h1 {
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
     nav a {
-      color: #58a6ff;
-      margin: 0 10px;
+      margin: 0 15px;
+      color: #333;
       text-decoration: none;
       font-weight: bold;
     }
 
+    nav a:hover {
+      color: #0077cc;
+    }
+
+    .search-bar {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+    }
+
+    .search-bar input, .search-bar select {
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .search-bar button {
+      padding: 0.7rem 1rem;
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
     .container {
-      max-width: 900px;
+      max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
-    .section {
-      margin-bottom: 2rem;
-    }
-
     .section h2 {
       margin-bottom: 1rem;
-      color: #0366d6;
+      color: #0077cc;
     }
 
-    .project {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
       background: #fff;
       padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .project a {
-      text-decoration: none;
-      color: #0366d6;
-      font-weight: bold;
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.8rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial {
+      background-color: #e6f0f8;
+      padding: 2rem;
+      border-radius: 6px;
+      font-style: italic;
+    }
+
+    .contact {
+      background-color: #0077cc;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 6px;
     }
 
     footer {
+      background-color: #333;
+      color: #fff;
       text-align: center;
       padding: 1rem;
-      background-color: #24292e;
-      color: #fff;
       margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Your Name</h1>
-    <p>Software Developer | Open Source Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Welcome to DreamHome</h1>
+    <p>Your trusted partner for buying, selling & renting properties</p>
   </header>
 
-  <div class="container">
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        Hello! I'm a passionate developer who loves building web applications and contributing to open-source projects.
-        I specialize in front-end technologies and enjoy turning ideas into reality through code.
-      </p>
-    </section>
+  <nav>
+    <a href="#listings">Properties</a>
+    <a href="#services">Services</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
+  <div class="search-bar container">
+    <input type="text" placeholder="Search location or keyword...">
+    <select>
+      <option>Buy</option>
+      <option>Rent</option>
+    </select>
+    <button>Search</button>
+  </div>
 
-      <div class="project">
-        <h3><a href="https://github.com/yourusername/project1" target="_blank">Project One</a></h3>
-        <p>A brief description of Project One. Explain what it does and the technologies used.</p>
+  <div class="container section" id="listings">
+    <h2>Featured Listings</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?house" alt="House 1">
+        <h3>Luxury Family Home</h3>
+        <p>4 Bed • 3 Bath • $450,000</p>
       </div>
-
-      <div class="project">
-        <h3><a href="https://github.com/yourusername/project2" target="_blank">Project Two</a></h3>
-        <p>A brief description of Project Two. Mention the purpose and any achievements or contributions.</p>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?apartment" alt="Apartment">
+        <h3>Modern City Apartment</h3>
+        <p>2 Bed • 2 Bath • $1,200/mo</p>
       </div>
-    </section>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?villa" alt="Villa">
+        <h3>Beachside Villa</h3>
+        <p>5 Bed • 4 Bath • $850,000</p>
+      </div>
+    </div>
+  </div>
 
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <p>You can reach me via:</p>
-      <ul>
-        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
-      </ul>
-    </section>
+  <div class="container section" id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Buy Property</h3>
+        <p>We help you find and purchase your dream home with ease.</p>
+      </div>
+      <div class="card">
+        <h3>Sell Property</h3>
+        <p>List your property with us and reach thousands of buyers.</p>
+      </div>
+      <div class="card">
+        <h3>Rentals</h3>
+        <p>Explore a variety of rental homes and apartments.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section" id="about">
+    <h2>About DreamHome</h2>
+    <p>
+      DreamHome is a leading real estate company committed to making property transactions smooth and transparent. With over 10 years in the market, our team of experts ensures you get the best value whether you're buying, selling, or renting.
+    </p>
+  </div>
+
+  <div class="container section">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial">
+      "DreamHome helped us find our perfect family home! They were professional, helpful, and extremely responsive."
+      <br>— Sarah M., Singapore
+    </div>
+  </div>
+
+  <div class="container section contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@dreamhome.com" style="color: #fff; text-decoration: underline;">info@dreamhome.com</a></p>
+    <p>Phone: +65 1234 5678</p>
+    <p>Location: 88 Orchard Road, Singapore</p>
   </div>
 
   <footer>
-    <p>© 2025 Your Name. Built with HTML & CSS.</p>
+    <p>© 2025 DreamHome Real Estate. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
